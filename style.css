@@ -90,7 +90,7 @@ main p {
     gap: 20px;
 }
 .articles .article {
-    flex:  100%; /* العرض الافتراضي هو 100% (عنصر واحد في كل صف) */
+    flex:  100%; 
 }
 .articles >* {
 flex: calc(33.33% - 20px);
@@ -196,8 +196,9 @@ article p {
         gap: 10px;
     }
 
-    .articles .article {
-        flex:  48%; 
+    
+    .articles > * {
+        flex: calc(50% - 10px); 
     }
 
     .footer-start,
@@ -214,10 +215,11 @@ article p {
     }
 }
 
-/* شاشة 480px أو أقل (الهواتف الذكية الصغيرة) */
+
 @media (max-width: 480px) {
     .header {
         padding: 10px;
+        flex-wrap: wrap;
     }
 
     .logo {
@@ -228,8 +230,9 @@ article p {
         font-size: 12px;
     }
 
-    .articles .article {
-        flex:  100%; 
+    
+    .articles > * {
+        flex: 100%; 
     }
 
     .footer-start,
