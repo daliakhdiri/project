@@ -51,6 +51,47 @@ header{
    font-size: 15px;
    text-align: left;
 }
+.dropdown {
+    position: relative;
+    display: none;
+    padding-right: 56px;
+}
+
+.dropbutton {
+    background-color: #7ebfe2;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-list {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 60px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    padding: 10px 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+.dropdown-list a {
+    display: block;
+    padding: 10px 2px;
+    color: #333;
+    text-decoration: none;
+}
+.dropdown:hover .dropdown-list {
+    display: block;
+    opacity: 1;
+}
+.dropdown-list a:hover {
+    background-color: #e0e0e0;
+    color: #333;
+}
 .search {
     position: relative;
 }
@@ -194,6 +235,12 @@ article p {
     .nav-links {
         font-size: 14px;
         gap: 10px;
+    }
+     .nav-links{
+        display: none;
+    }
+    .dropdown {
+        display: inline-block;
     }
 
     
